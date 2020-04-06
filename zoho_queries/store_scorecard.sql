@@ -29,5 +29,6 @@ FROM
     mtdSales."Store Number" = schedules."Store Number"
     AND mtdSales."Invoice Month Start" = schedules."Invoice Month Start"
   ORDER BY
+    schedules."Invoice Month Start" DESC,
     schedules."Chain",
     (mtdSales."Month To Date Sales" / schedules."Business Days So Far" * schedules."Business Days In Month") DESC
